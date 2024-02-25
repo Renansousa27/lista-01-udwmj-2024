@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão</title>
+</head>
+<body>
+
+<button onclick="abrirCaixaDeTexto()">Abrir Caixa de Texto</button>
+
+<script>
+function abrirCaixaDeTexto() {
+    // Solicitar texto ao usuário usando a função prompt
+    var textoInserido = prompt("Digite algo:");
+
+    // Verificar se o usuário clicou em "Cancelar" ou deixou em branco
+    if (textoInserido === null || textoInserido === "") {
+        alert("Nenhum texto inserido.");
+    } else {
+        // Imprimir o texto na tela
+        document.body.innerHTML += "<p>Texto inserido: " + textoInserido + "</p>";
+    }
+}
+</script>
+
+</body>
+</html>
